@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cjei11s50mf1"
+path="res://.godot/imported/castle01_alt.ogg-d5934373ee6571a6e6f733113787d473.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/castle01_alt.ogg"
+dest_files=["res://.godot/imported/castle01_alt.ogg-d5934373ee6571a6e6f733113787d473.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

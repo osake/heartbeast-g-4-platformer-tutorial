@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://br2m6qca0vsw"
+path="res://.godot/imported/forest02.wav-57f317bcd750d0d4601467030049377a.sample"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/forest02.wav"
+dest_files=["res://.godot/imported/forest02.wav-57f317bcd750d0d4601467030049377a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

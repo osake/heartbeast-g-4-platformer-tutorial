@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dm4c6tgaixvuk"
+path="res://.godot/imported/8bit_town03_dry.wav-14b8650fb13292396c87f536782334ef.sample"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/8bit_town03_dry.wav"
+dest_files=["res://.godot/imported/8bit_town03_dry.wav-14b8650fb13292396c87f536782334ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

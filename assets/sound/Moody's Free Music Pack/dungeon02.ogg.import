@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bdhnwqip8rd1c"
+path="res://.godot/imported/dungeon02.ogg-8d81409da106d38c78d2747d8f92d0c5.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/dungeon02.ogg"
+dest_files=["res://.godot/imported/dungeon02.ogg-8d81409da106d38c78d2747d8f92d0c5.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

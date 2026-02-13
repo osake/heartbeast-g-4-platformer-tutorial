@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://yxkulboftwpg"
+path="res://.godot/imported/8bit_town01_dry.ogg-08904e557b144af8920e203022abb914.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/8bit_town01_dry.ogg"
+dest_files=["res://.godot/imported/8bit_town01_dry.ogg-08904e557b144af8920e203022abb914.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

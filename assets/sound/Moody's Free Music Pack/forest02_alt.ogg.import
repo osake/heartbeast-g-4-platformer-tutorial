@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b6i7e73m8qo7l"
+path="res://.godot/imported/forest02_alt.ogg-ea21e476856ddf6dd41bfdda888a32d9.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/forest02_alt.ogg"
+dest_files=["res://.godot/imported/forest02_alt.ogg-ea21e476856ddf6dd41bfdda888a32d9.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

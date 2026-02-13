@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cxks8iq1jxssc"
+path="res://.godot/imported/town04.ogg-9a511de8b0d9443446c0667b451bf30c.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/town04.ogg"
+dest_files=["res://.godot/imported/town04.ogg-9a511de8b0d9443446c0667b451bf30c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

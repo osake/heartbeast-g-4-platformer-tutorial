@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="PlayerMovementData" format=3 uid="uid://cfjc53lcr60hg"]
+
+[ext_resource type="Script" uid="uid://b0asowaotbq5" path="res://scripts/player_movement_data.gd" id="1_oceug"]
+
+[resource]
+script = ExtResource("1_oceug")
+speed = 50.0
+jump_velocity = -250.0
+gravity_scale = 0.5
+metadata/_custom_type_script = "uid://b0asowaotbq5"

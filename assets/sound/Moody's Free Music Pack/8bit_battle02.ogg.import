@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3rfycr54l334"
+path="res://.godot/imported/8bit_battle02.ogg-0b8d82671772c93fc6612b39042645f2.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/sound/Moody's Free Music Pack/8bit_battle02.ogg"
+dest_files=["res://.godot/imported/8bit_battle02.ogg-0b8d82671772c93fc6612b39042645f2.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
