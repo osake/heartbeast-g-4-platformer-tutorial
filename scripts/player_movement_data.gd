@@ -7,3 +7,4 @@ extends Resource
 @export var friction = 400.0 # lower for just a wee bit of slide after moving
 @export var gravity_scale = 1.0
 @export var air_resistance = 200.0
+@export var air_acceleration = 400.0

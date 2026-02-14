@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dfiakd7mtvrm3"]
 
 [ext_resource type="Script" uid="uid://dfniyyoxrfjkk" path="res://player.gd" id="1_onrkg"]
-[ext_resource type="Resource" uid="uid://cfjc53lcr60hg" path="res://slower_movement_data.tres" id="2_i3pqv"]
+[ext_resource type="Resource" uid="uid://dcv43winuum5t" path="res://default_movement_data.tres" id="2_i3pqv"]
 [ext_resource type="Texture2D" uid="uid://dphb8ifwk6stu" path="res://assets/art/player.png" id="2_onrkg"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
@@ -81,7 +81,11 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_onrkg"]
 size = Vector2(8, 15)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
+size = Vector2(6, 12)
+
 [node name="Player" type="CharacterBody2D" unique_id=2145919557]
+collision_layer = 2
 floor_stop_on_slope = false
 floor_constant_speed = true
 floor_snap_length = 3.0
@@ -101,3 +105,18 @@ shape = SubResource("RectangleShape2D_onrkg")
 [node name="CoyoteJumpTimer" type="Timer" parent="." unique_id=527043808]
 wait_time = 0.05
 one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=591138522]
+position = Vector2(0, -32)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="HazardDetector" type="Area2D" parent="." unique_id=817177277]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HazardDetector" unique_id=1671884042]
+position = Vector2(0, -7)
+shape = SubResource("RectangleShape2D_i3pqv")
+
+[connection signal="area_entered" from="HazardDetector" to="." method="_on_hazard_detector_area_entered"]
