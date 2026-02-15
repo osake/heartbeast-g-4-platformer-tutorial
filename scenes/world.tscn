@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c8tfyk0ybiljv"]
+
+[ext_resource type="Script" uid="uid://b10nj54044d6l" path="res://world.gd" id="1_f3sb7"]
+[ext_resource type="PackedScene" uid="uid://dfiakd7mtvrm3" path="res://scenes/player.tscn" id="2_fj7yv"]
+[ext_resource type="PackedScene" uid="uid://btwkbo7n6k4mj" path="res://scenes/level_completed.tscn" id="5_036b0"]
+[ext_resource type="PackedScene" uid="uid://obiagjecse64" path="res://scenes/level_tile_map_layer.tscn" id="6_dwbse"]
+[ext_resource type="PackedScene" uid="uid://b3bif7tqt76ia" path="res://scenes/slopes_tile_map_layer.tscn" id="6_pkg7o"]
+
+[node name="World" type="Node2D" unique_id=1571912497 node_paths=PackedStringArray("level_completed")]
+script = ExtResource("1_f3sb7")
+level_completed = NodePath("CanvasLayer/LevelCompleted")
+
+[node name="Player" parent="." unique_id=2145919557 instance=ExtResource("2_fj7yv")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=714742377]
+
+[node name="LevelCompleted" parent="CanvasLayer" unique_id=1059716081 instance=ExtResource("5_036b0")]
+visible = false
+
+[node name="LevelTileMapLayer" parent="." unique_id=1708045268 instance=ExtResource("6_dwbse")]
+
+[node name="SlopesTileMapLayer" parent="." unique_id=1557799412 instance=ExtResource("6_pkg7o")]

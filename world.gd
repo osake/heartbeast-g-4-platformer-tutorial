@@ -1,9 +1,22 @@
 extends Node2D
 
-@onready var collision_polygon_2d: CollisionPolygon2D = $StaticBody2D/CollisionPolygon2D
+@export var level_completed: ColorRect
 
-@onready var polygon_2d: Polygon2D = $StaticBody2D/CollisionPolygon2D/Polygon2D
+@export var next_level: PackedScene
 
 func _ready() -> void:
 	RenderingServer.set_default_clear_color(Color.BLACK)
-	polygon_2d.polygon = collision_polygon_2d.polygon
+	Events.level_completed.connect(show_level_completed)
+
+
+func show_level_completed():
+	level_completed.show()
+	get_tree().paused = true
+	if not next_level is PackedScene: return
+	await LevelTransition.fade_to_black()
+	# I thought it would make more sense to wait and unpause after the level transition completed,
+	# but that doesn't seem to work... or i just need to mess with it a bit more
+	get_tree().paused = false
+	get_tree().change_scene_to_packed(next_level)
+	# heartbeast says you don't have to await this one
+	await LevelTransition.fade_from_black()

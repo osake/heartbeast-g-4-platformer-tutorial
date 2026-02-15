@@ -11,9 +11,14 @@ config_version=5
 [application]
 
 config/name="Heartbeast G4 Platformer Tutorial"
-run/main_scene="res://world.tscn"
+run/main_scene="uid://car4d4aamr2r8"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Events="*uid://cqujje8nk204x"
+LevelTransition="*uid://djh5pvamr1vlh"
 
 [display]
 

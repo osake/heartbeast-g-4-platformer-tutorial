@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdr85jq7hmk6b"]
 
 [ext_resource type="Texture2D" uid="uid://bda1pl63ktaf8" path="res://assets/art/spikes.png" id="1_s0g1x"]
-[ext_resource type="PackedScene" uid="uid://bbvehkhgrt4gi" path="res://hazard_area.tscn" id="2_nrdsm"]
+[ext_resource type="PackedScene" uid="uid://bbvehkhgrt4gi" path="res://scenes/hazard_area.tscn" id="2_nrdsm"]
 
 [node name="Spikes" type="Node2D" unique_id=1973487643]
 position = Vector2(8, -8)
