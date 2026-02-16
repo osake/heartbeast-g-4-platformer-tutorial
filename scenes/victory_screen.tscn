@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://rnq0ojsbphbp"]
+
+[ext_resource type="Script" uid="uid://bgx5dlvrryshi" path="res://scripts/victory_screen.gd" id="1_ujlt3"]
+
+[node name="VictoryScreen" type="CenterContainer" unique_id=648025528]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ujlt3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1042254139]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=472156984]
+layout_mode = 2
+text = "You Win!"
+horizontal_alignment = 1
+
+[node name="MenuButton" type="Button" parent="VBoxContainer" unique_id=1474646397]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 16)
+layout_mode = 2
+text = "Return to Main Menu"
+
+[connection signal="pressed" from="VBoxContainer/MenuButton" to="." method="_on_button_pressed"]

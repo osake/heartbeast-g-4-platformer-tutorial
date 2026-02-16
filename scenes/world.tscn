@@ -6,6 +6,67 @@
 [ext_resource type="PackedScene" uid="uid://obiagjecse64" path="res://scenes/level_tile_map_layer.tscn" id="6_dwbse"]
 [ext_resource type="PackedScene" uid="uid://b3bif7tqt76ia" path="res://scenes/slopes_tile_map_layer.tscn" id="6_pkg7o"]
 
+[sub_resource type="Animation" id="Animation_71j4m"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer2/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Start in 3"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/StartIn:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_qfnet"]
+resource_name = "countdown"
+length = 3.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/StartIn/CenterContainer2/StartInLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.20000005, 1.2, 2.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": ["Start in 3", "Start in 2", "Start in 1"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/StartIn:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.199706),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_i7141"]
+_data = {
+&"RESET": SubResource("Animation_71j4m"),
+&"countdown": SubResource("Animation_qfnet")
+}
+
 [node name="World" type="Node2D" unique_id=1571912497 node_paths=PackedStringArray("level_completed")]
 script = ExtResource("1_f3sb7")
 level_completed = NodePath("CanvasLayer/LevelCompleted")
@@ -17,6 +78,47 @@ level_completed = NodePath("CanvasLayer/LevelCompleted")
 [node name="LevelCompleted" parent="CanvasLayer" unique_id=1059716081 instance=ExtResource("5_036b0")]
 visible = false
 
+[node name="StartIn" type="ColorRect" parent="CanvasLayer" unique_id=323078189]
+unique_name_in_owner = true
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.54901963)
+
+[node name="CenterContainer2" type="CenterContainer" parent="CanvasLayer/StartIn" unique_id=2073957715]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartInLabel" type="Label" parent="CanvasLayer/StartIn/CenterContainer2" unique_id=169327431]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start in 3"
+
+[node name="CenterContainer" type="CenterContainer" parent="CanvasLayer" unique_id=981327462]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 17.0
+grow_horizontal = 2
+
+[node name="LevelTimeLabel" type="Label" parent="CanvasLayer/CenterContainer" unique_id=1428208594]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 2
+
 [node name="LevelTileMapLayer" parent="." unique_id=1708045268 instance=ExtResource("6_dwbse")]
 
 [node name="SlopesTileMapLayer" parent="." unique_id=1557799412 instance=ExtResource("6_pkg7o")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1268446098]
+process_mode = 3
+libraries/ = SubResource("AnimationLibrary_i7141")
+
+[connection signal="next_level" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_next_level"]
+[connection signal="retry" from="CanvasLayer/LevelCompleted" to="." method="_on_level_completed_retry"]
